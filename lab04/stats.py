@@ -26,7 +26,9 @@ def read_valid(sp):
     for s in sp:
         try:
             res.append(parse_record(s))
-    
+        except ValueError:
+            continue
+               
     return result
 
 def average_by_city(sp):
