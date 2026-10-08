@@ -38,7 +38,7 @@ def average_by_city(sp):
         result[city][0] += temp
         result[city][1] += 1
     for city in result:
-        result[city] = (result[city][0] / result[city][1]):.1f
+        result[city] = result[city][0] / result[city][1])
     
     return result
 
