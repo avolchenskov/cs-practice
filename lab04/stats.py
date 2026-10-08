@@ -11,7 +11,6 @@ def parse_record(s):
 
     result = {}
     try:
-        temp = float(split[1])
         result["city"] = info[0]
         result["temperature"] = float(info[1])
         result["date"] = info[2]
