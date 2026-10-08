@@ -50,7 +50,7 @@ def warmest_city(sp):
     
     
     for city in d:
-        t = d['city']
+        t = d[city]
         if t > mx:
             mx = t
             result_city = city
