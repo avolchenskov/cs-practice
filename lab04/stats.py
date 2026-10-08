@@ -5,7 +5,7 @@ def parse_record(s):
         raise ValueError('Строка пустая')
     if len(info) < 3:
         raise ValueError('В строке меньше 3-х параметров')
-    if info[0] == '' or indo[2] == '':
+    if info[0] == '' or info[2] == '':
         raise ValueError('Город или дата пустые')
 
 
