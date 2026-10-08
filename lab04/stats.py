@@ -25,7 +25,7 @@ def read_valid(sp):
     result = []
     for s in sp:
         try:
-            res.append(parse_record(s))
+            result.append(parse_record(s))
         except ValueError:
             continue
                
