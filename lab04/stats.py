@@ -35,7 +35,7 @@ def average_by_city(sp):
     for d in sp:
         city = d['city']
         temp = d['temperature']
-        result[city] = result.get(city[0, 0])
+        result[city] = result.get(city, [0, 0])
         result[city][0] += temp
         result[city][1] += 1
     for city in result:
