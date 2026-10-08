@@ -46,7 +46,7 @@ def average_by_city(sp):
 def warmest_city(sp):
     d = average_by_city(sp)
     result_city = ""
-    mx = float(-inf)
+    mx = float('-inf')
     
     
     for city in d:
