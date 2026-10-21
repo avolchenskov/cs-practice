@@ -19,17 +19,20 @@ def parse_event(line: str) -> dict:
 
 
 def count_levels(lines) -> dict:
-
-    counts = {level: 0 for level in VALID_LEVELS}
-    counts["BROKEN"] = 0
+    counts = {}
 
     for line in lines:
         if not line.strip():
             continue
         try:
             event = parse_event(line)
-            counts[event["level"]] += 1
+            level = event["level"]
+            if level not in counts:
+                counts[level] = 0
+            counts[level] += 1
         except ValueError:
+            if "BROKEN" not in counts:
+                counts["BROKEN"] = 0
             counts["BROKEN"] += 1
 
     return counts
