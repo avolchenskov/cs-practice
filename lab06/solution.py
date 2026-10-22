@@ -2,7 +2,8 @@ def count_by_extension(paths):
     d = dict()
     for p in paths:
         r = ''
-        if '.' in p:
+        if '.' in p and len(p.split('.')) > 1:
+      
             r = p.split('.')[-1]
             r = r.lower()
         d[r] = d.get(r, 0) + 1
