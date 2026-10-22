@@ -27,6 +27,6 @@ def human_size(a: int) -> str:
         a /= 1024
         cnt += 1
 
-    return f'{a.:1f} {d[cnt]}'    
+    return f'{a:.1f} {d[cnt]}'    
 
 
