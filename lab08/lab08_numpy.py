@@ -33,3 +33,29 @@ matrix = np.arange(1, 26).reshape(5, 5)
 print(matrix[:3], matrix[:3].shape, matrix[-2:], matrix[-2:].shape, matrix[1:4, 2:5], matrix[1:4, 2:5].shape, matrix[-2:, -2:], matrix[-2:, -2:].shape)
 
 #_______________________________________________________________________________
+
+vector = np.array([10, 20, 30, 40, 50])
+vector[1:4] = 0
+
+small_matrix = np.arange(1, 10).reshape(3, 3)
+small_matrix[0, :] = -1
+small_matrix[1:, 1:] = 9
+
+changed_hours = hours.copy()    # чтобы исходный массив hours не изменился
+changed_hours[2:5] = 99
+print(changed_hours, hours, sep='\n')
+
+changed_matrix = matrix.copy()
+changed_matrix[1] = 0
+changed_matrix[:, -1] = -1
+changed_matrix[1:4, 1:4] = 100
+
+print(matrix, changed_matrix, sep='\n')
+
+#_______________________________________________________________________________
+
+numbers = np.arange(12)
+table = numbers.reshape(3, 4) # reshape(5, 3) выведет ошибку, так как 5*3 > 12
+transposed = table.T
+
+print(numbers.shape, table.shape, transposed.shape)
