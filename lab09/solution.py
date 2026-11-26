@@ -9,7 +9,7 @@ def vector_report(values):
     d = dict()
     d['third'] = vector[2].item()
     d['last'] = vector[-1].item()
-    d['middle'] = vector[2:7].tolist()
+    d['middle'] = vector[2:6].tolist()
     d['every_second'] = vector[::2].tolist()
     d['reversed'] = vector[::-1].tolist()
 
