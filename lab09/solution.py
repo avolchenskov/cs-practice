@@ -4,7 +4,8 @@ def make_hours():
     return np.arange(0, 22, 3).tolist()
 
 
-def vector_report(vector):
+def vector_report(values):
+    vector = np.asarray(values, dtype = float)
     d = dict()
     d['third'] = vector[2]
     d['last'] = vector[-1]
@@ -20,7 +21,7 @@ def change_vector(values):
     vector[2:5] = 99
     vector[::2] = -1
 
-    return vector.to_list()
+    return vector.tolist()
 
 
 def cap_above(values, limit):
