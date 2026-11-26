@@ -7,11 +7,11 @@ def make_hours():
 def vector_report(values):
     vector = np.asarray(values, dtype = float)
     d = dict()
-    d['third'] = vector[2]
-    d['last'] = vector[-1]
-    d['middle'] = vector[2:7]
-    d['every_second'] = vector[::2]
-    d['reversed'] = vector[::-1]
+    d['third'] = vector[2].item()
+    d['last'] = vector[-1].item()
+    d['middle'] = vector[2:7].tolist()
+    d['every_second'] = vector[::2].tolist()
+    d['reversed'] = vector[::-1].tolist()
 
     return d
 
